@@ -246,7 +246,7 @@ textarea {
 #preview-shadow {
   background-color: var(--previewShadow);
   width: 300px;
-  height: 250px;
+  height: 150px;
   padding-left: 30px;
   padding-top: 30px;
 }
@@ -308,8 +308,54 @@ textarea {
   text-align: center;
 }
 
-#social_img {
+.social-links-wrapper img {
+  width: 200px;
+  height: 200px;
+}
+
+.social-links a {
+  position: relative;
+}
+
+.social-links a::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
   width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  color: var(--mainText);
+  font-family: "Roboto Mono", monospace;
+}
+
+.social-links a#social-link-1:hover::before {
+  content: "Github";
+}
+
+.social-links a#social-link-2:hover::before {
+  content: "Linkedin";
+}
+
+.social-links a#social-link-3:hover::before {
+  content: "Twitter";
+}
+
+.social-links a:hover::before {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.social_img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  position: relative;
+}
+
+.social_img:hover {
+  cursor: pointer;
+  border: 4px solid var(--borderColor);
 }
 
 .post-wrapper {
